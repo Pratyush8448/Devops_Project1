@@ -5,10 +5,12 @@ FROM node:20-alpine
 WORKDIR /app
 
 # Copy dependencies
-COPY package*.json ./terraform-project-task-1-main/terraform-project-task-1-main/
+RUN cd ../..
+COPY ./terraform-project-task-1-main/terraform-project-task-1-main/package*.json ./
 RUN npm install
 
 # Copy source files
+RUN cd ./terraform-project-task-1-main/terraform-project-task-1-main/
 COPY . .
 
 # Expose app port (e.g., 3000)
