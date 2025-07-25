@@ -5,7 +5,7 @@ FROM node:20-alpine
 WORKDIR /app
 
 # Copy dependencies
-COPY package*.json ./
+COPY package*.json ./terraform-project-task-1-main/terraform-project-task-1-main/
 RUN npm install
 
 # Copy source files
