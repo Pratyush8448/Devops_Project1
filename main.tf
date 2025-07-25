@@ -161,7 +161,7 @@ resource "aws_codebuild_project" "build" {
 }
   source {
     type      = "CODEPIPELINE"
-    buildspec = "buildspec.yml"
+    buildspec = "terraform-project-task-1-main/terraform-project-task-1-main/buildspec.yml"
   }
 }
 
